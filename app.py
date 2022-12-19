@@ -1,5 +1,6 @@
 from flask import Flask, render_template,session,redirect
 from pymongo import MongoClient
+import os
 
 app = Flask(__name__)
 app.secret_key = 'dlsjflkdjfljdsfj//..'
@@ -36,4 +37,4 @@ def login():
     return model.User_class().login()
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True, host= '0.0.0.0', port = 4000)
