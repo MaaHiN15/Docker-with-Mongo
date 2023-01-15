@@ -6,7 +6,7 @@ app = Flask(__name__)
 app.secret_key = 'dlsjflkdjfljdsfj//..'
 
 # database
-client = MongoClient('mongodb+srv://maahin:admin@mongo-cluster.uc79axt.mongodb.net/?retryWrites=true&w=majority')
+client = MongoClient('mongodb://maahin:admin@mongo:27017')
 db_module = client.db
 
 # routes
